@@ -4,7 +4,7 @@ const sportswear = [
     price: 5.95
   },
   {
-    productName: "Adidas Trainers",
+    productName: "Adidas Hoodie",
     price: 79.99
   },
   {

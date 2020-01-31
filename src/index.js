@@ -5,11 +5,10 @@ import { createStore } from "redux"
 import { Provider } from "react-redux"
 import rootReducer from "./reducers/rootReducer"
 
-import "./index.css"
 import App from "./App"
 
 const store = createStore(rootReducer)
-
+console.log(store.getState())
 ReactDOM.render(
   <Provider store={store}>
     <App />

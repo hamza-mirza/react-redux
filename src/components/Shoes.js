@@ -1,17 +1,17 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 
-class Clothes extends Component {
+class Shoes extends Component {
   render() {
-    const sportsWearCollection = this.props.sportsWear.map(product => {
+    const shoeCollection = this.props.shoes.map(product => {
       return <li key={product.productName}>{ product.productName } | { product.price }</li>
     })
     return (
       <div>
-        <h1>Sportwear</h1>
+        <h1>Shoes</h1>
         <div>
           <ul>
-            {sportsWearCollection}
+            {shoeCollection}
           </ul>
         </div>
       </div>
@@ -19,10 +19,10 @@ class Clothes extends Component {
   }
 }
 
-const mapStateToProps = ({sportsWear}) => {
+const mapStateToProps = ({shoes}) => {
   return {
-    sportsWear
+    shoes
   }
 }
 
-export default connect(mapStateToProps)(Clothes)
+export default connect(mapStateToProps)(Shoes)
