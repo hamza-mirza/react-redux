@@ -3,18 +3,20 @@ import { connect } from "react-redux"
 
 class FrozenDept extends Component {
   render() {
-    console.log(this.props.frozenData)
+    const sportsWearCollection = this.props.sportsWear.map(product => {
+      return <li key={product.productName}>{ product.productName } | { product.price }</li>
+    })
     return (
       <div>
-        <h1>Gay boi</h1>
+        <h1>{sportsWearCollection}</h1>
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({sportsWear}) => {
   return {
-    frozenData: state.frozen
+    sportsWear
   }
 }
 
