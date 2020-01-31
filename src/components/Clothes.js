@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 
-class FrozenDept extends Component {
+class Clothes extends Component {
   render() {
     const sportsWearCollection = this.props.sportsWear.map(product => {
       return <li key={product.productName}>{ product.productName } | { product.price }</li>
@@ -20,4 +20,4 @@ const mapStateToProps = ({sportsWear}) => {
   }
 }
 
-export default connect(mapStateToProps)(FrozenDept)
+export default connect(mapStateToProps)(Clothes)
