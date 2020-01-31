@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 
 class Clothes extends Component {
   render() {
-    const sportsWearCollection = this.props.sportsWear.map(product => {
+    const clothes = this.props.clothes.map(product => {
       return <li key={product.productName}>{ product.productName } | { product.price }</li>
     })
     return (
@@ -11,7 +11,7 @@ class Clothes extends Component {
         <h1>Sportwear</h1>
         <div>
           <ul>
-            {sportsWearCollection}
+            {clothes}
           </ul>
         </div>
       </div>
@@ -19,9 +19,9 @@ class Clothes extends Component {
   }
 }
 
-const mapStateToProps = ({sportsWear}) => {
+const mapStateToProps = ({clothes}) => {
   return {
-    sportsWear
+    clothes
   }
 }
 
