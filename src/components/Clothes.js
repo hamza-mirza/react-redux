@@ -8,7 +8,7 @@ class Clothes extends Component {
     })
     return (
       <div>
-        <h1>Sportwear</h1>
+        <h1>Clothes</h1>
         <div>
           <ul>
             {clothes}
